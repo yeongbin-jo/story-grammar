@@ -1,0 +1,9 @@
+{
+ "id": "iyagi",
+ "title": "이야기의 문법",
+ "desc": "소설과 웹소설의 플롯·인물·정보 설계를 움직이는 다이어그램으로 한 단계씩 배우는 인터랙티브 강의",
+ "logo": "이야기의 <mark>문법</mark>",
+ "credit": "형식과 스타일은 <a href=\"https://designed-to-scale.vercel.app/\" target=\"_blank\" rel=\"noopener\">Designed to Scale</a>(<a href=\"https://x.com/DilumSanjaya\" target=\"_blank\" rel=\"noopener\">@DilumSanjaya</a>)에서 영감을 받았습니다. 자매 사이트: <a href=\"https://yeongbin-jo.github.io/screen-grammar/\" target=\"_blank\" rel=\"noopener\">화면의 문법</a>",
+ "own_favicon": true,
+ "repo": "https://github.com/yeongbin-jo/story-grammar"
+}
