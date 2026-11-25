@@ -42,6 +42,7 @@
   --f: "Paperlogy", "Pretendard Variable", -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", sans-serif;
   --display: "Paperlogy", "Pretendard Variable", sans-serif;
   --formal: "Inter", "Pretendard Variable", -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+  --read: "Pretendard Variable", -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
   --mono: SFMono-Regular, Menlo, Monaco, Consolas, "Pretendard Variable", monospace;
 }
 :root[data-theme="dark"] {
@@ -114,7 +115,7 @@ kbd { font: 10px/14px var(--mono); color: var(--faint); background: var(--raised
 .only-narrow { display: none; }
 
 /* ---------- 3단 레이아웃 ---------- */
-.layout { flex: 1; min-height: 0; display: grid; grid-template-columns: 256px minmax(0, 1fr) 300px; gap: 12px; padding: 10px max(12px, env(safe-area-inset-right, 0px)) 12px max(12px, env(safe-area-inset-left, 0px)); }
+.layout { flex: 1; min-height: 0; display: grid; grid-template-columns: 256px minmax(0, 1fr) 348px; gap: 12px; padding: 10px max(12px, env(safe-area-inset-right, 0px)) 12px max(12px, env(safe-area-inset-left, 0px)); }
 .side, .rail { display: flex; flex-direction: column; gap: 12px; min-width: 0; }
 .side { position: sticky; top: 56px; height: calc(100vh - 68px); }
 .rail > * { flex: none; }
@@ -309,6 +310,7 @@ label.check-row, .ctl-check { display: flex; gap: 8px; align-items: center; font
 .tl-ph { position: absolute; left: 34px; right: 0; top: 0; bottom: 0; pointer-events: none; }
 
 /* ---------- 반응형 ---------- */
+@media (max-width: 1380px) { .layout { grid-template-columns: 248px minmax(0, 1fr) 300px; } }
 @media (max-width: 1240px) {
   .layout { grid-template-columns: 236px minmax(0, 1fr); }
   .rail { grid-column: 2; position: static; max-height: none; overflow: visible; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); align-items: start; }
@@ -412,7 +414,10 @@ html.theme-vt::view-transition-new(root) { z-index: 2; }
 .subtitle, .crumb, .terms dd, .gloss dd, .readout, .hint, .ctl output, .keys-hint, .stage-foot, .gloss .subtitle,
 .search input, .dom-stage, .course__head .muted, .mod__count, #tTime { font-family: var(--formal); }
 .ctl output, .readout, .mod__count, #tTime, .num { font-feature-settings: "tnum", "cv11", "ss01"; }
-.callout p:last-child { font-family: var(--f); font-weight: 500; font-size: 13px; line-height: 1.65; }
+.callout p:last-child { font-family: var(--read); font-weight: 500; font-size: 13.5px; line-height: 1.65; letter-spacing: -0.005em; }
+.guide__body p, .terms dd, .gloss dd, .subtitle, .hint { font-family: var(--read); letter-spacing: -0.005em; }
+.guide__body p { font-size: 14.5px; line-height: 1.75; font-weight: 400; }
+.guide__body b { font-weight: 650; }
 .title, .guide__title, .logo, .gloss h2, .gloss__track { font-weight: 600; letter-spacing: -0.01em; }
 
 /* =====================================================================
