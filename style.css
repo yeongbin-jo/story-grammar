@@ -34,7 +34,7 @@
 
   /* 캔버스 다이어그램 색 */
   --a: #426ec2; --b: #d55948; --c: #089772; --key: #eb9f2c;
-  --ch0: #c99d4e; --ch0-bg: #f6e6cb; --ch0-fg: #614100; --ch1: #86b46d; --ch1-bg: #ddeed4; --ch1-fg: #31521c; --ch2: #a498e5; --ch2-bg: #e7e4ff; --ch2-fg: #483e74; --ch3: #de8e69; --ch3-bg: #ffe0d2; --ch3-fg: #6e351a; --ch4: #cf8ac0; --ch4-bg: #fadef3; --ch4-fg: #65335b; --ch5: #35b9c0; --ch5-bg: #caf1f2; --ch5-fg: #00555b; --ch6: #58ba93; --ch6-bg: #d0f1e1; --ch6-fg: #00563b; --ch7: #66abe5; --ch7-bg: #d3ebff; --ch7-fg: #114b75; --ch8: #e18881; --ch8-bg: #ffdedb; --ch8-fg: #70312e; --ch9: #43b4d4; --ch9-bg: #cceffb; --ch9-fg: #005269; --ch10: #af95df; --ch10-bg: #ece2ff; --ch10-fg: #4f3b71;
+  --ch0: #c99d4e; --ch0-bg: #f6e6cb; --ch0-fg: #614100; --ch1: #86b46d; --ch1-bg: #ddeed4; --ch1-fg: #31521c; --ch2: #a498e5; --ch2-bg: #e7e4ff; --ch2-fg: #483e74; --ch3: #de8e69; --ch3-bg: #ffe0d2; --ch3-fg: #6e351a; --ch4: #cf8ac0; --ch4-bg: #fadef3; --ch4-fg: #65335b; --ch5: #35b9c0; --ch5-bg: #caf1f2; --ch5-fg: #00555b; --ch6: #58ba93; --ch6-bg: #d0f1e1; --ch6-fg: #00563b; --ch7: #66abe5; --ch7-bg: #d3ebff; --ch7-fg: #114b75; --ch8: #e18881; --ch8-bg: #ffdedb; --ch8-fg: #70312e; --ch9: #43b4d4; --ch9-bg: #cceffb; --ch9-fg: #005269; --ch10: #af95df; --ch10-bg: #ece2ff; --ch10-fg: #4f3b71; --ch11: #c7a33c; --ch11-bg: #f5ecc8; --ch11-fg: #5c4a00; --ch12: #7d9fd8; --ch12-bg: #dde7fb; --ch12-fg: #233f72; --ch13: #d97f9f; --ch13-bg: #fbdde8; --ch13-fg: #6b2740; --ch14: #8aa85c; --ch14-bg: #e5efd3; --ch14-fg: #3a4f17;
   --surface: #fbf7f1;
   --sunk: #efe5d8;
 
@@ -50,7 +50,7 @@
   --code: #2d2924; --pop: #3e5a2e; --pop-ink: #eef7e4; --hard: #000; --sand: #4a3b22; --mint: #2c4128; --lilac: #2f2840; --lilac-line: #4a3f63;
   --grid: rgba(255, 230, 190, 0.05); --hi: rgba(255, 240, 220, 0.06); --soft: rgba(0, 0, 0, 0.6);
   --a: #84aefa; --b: #f28979; --c: #61c8a4; --key: #f5b75b;
-    --ch0: #bf9752; --ch0-bg: #3f3017; --ch0-fg: #f0d3a3; --ch1: #83ad6d; --ch1-bg: #293820; --ch1-fg: #c4e2b4; --ch2: #9d94d9; --ch2-bg: #322f48; --ch2-fg: #d6d0ff; --ch3: #d28a69; --ch3-bg: #462b1f; --ch3-fg: #ffcab2; --ch4: #c586b7; --ch4-bg: #412a3c; --ch4-fg: #f6c7ea; --ch5: #40b1b7; --ch5-bg: #103a3c; --ch5-fg: #a0e6ea; --ch6: #5cb28f; --ch6-bg: #1a3a2d; --ch6-fg: #ace7cc; --ch7: #67a5d9; --ch7-bg: #1e3548; --ch7-fg: #b1ddff; --ch8: #d6857f; --ch8-bg: #472a27; --ch8-fg: #ffc6c0; --ch9: #4aadc9; --ch9-bg: #143843; --ch9-fg: #a3e3f8; --ch10: #a890d4; --ch10-bg: #362e46; --ch10-fg: #deceff;
+    --ch0: #bf9752; --ch0-bg: #3f3017; --ch0-fg: #f0d3a3; --ch1: #83ad6d; --ch1-bg: #293820; --ch1-fg: #c4e2b4; --ch2: #9d94d9; --ch2-bg: #322f48; --ch2-fg: #d6d0ff; --ch3: #d28a69; --ch3-bg: #462b1f; --ch3-fg: #ffcab2; --ch4: #c586b7; --ch4-bg: #412a3c; --ch4-fg: #f6c7ea; --ch5: #40b1b7; --ch5-bg: #103a3c; --ch5-fg: #a0e6ea; --ch6: #5cb28f; --ch6-bg: #1a3a2d; --ch6-fg: #ace7cc; --ch7: #67a5d9; --ch7-bg: #1e3548; --ch7-fg: #b1ddff; --ch8: #d6857f; --ch8-bg: #472a27; --ch8-fg: #ffc6c0; --ch9: #4aadc9; --ch9-bg: #143843; --ch9-fg: #a3e3f8; --ch10: #a890d4; --ch10-bg: #362e46; --ch10-fg: #deceff; --ch11: #bf9d3e; --ch11-bg: #3d3416; --ch11-fg: #f0dfa0; --ch12: #7b99cf; --ch12-bg: #22314a; --ch12-fg: #c3d6fb; --ch13: #cf7d9a; --ch13-bg: #45242f; --ch13-fg: #fbc6d8; --ch14: #86a25c; --ch14-bg: #2c3820; --ch14-fg: #cfe3ad;
     --surface: #2a2621; --sunk: #1a1814;
   color-scheme: dark;
 }
@@ -565,3 +565,29 @@ html.theme-vt::view-transition-new(root) { z-index: 2; }
 .gh-star:hover .gh-star__star { transform: rotate(-14deg) scale(1.18); }
 .gh-star:active { transform: translateY(1px); box-shadow: inset 0 1px 0 var(--hi), 0 0.5px 0 var(--ink2); transition-duration: .06s; }
 @media (max-width: 520px) { .gh-star { padding: 0 10px; } .gh-star__label { display: none; } .gh-star__count { padding-left: 0; border: 0; } }
+
+/* ---------- 모바일: 제목 → 무대 → 설명 → 단계 → 도구 순서로 ---------- */
+@media (max-width: 860px) {
+  .sheet { display: contents; }
+  #lessonView:not([hidden]), .rail:not([hidden]) { display: contents; }
+  #glossView:not([hidden]) { order: 1; background: var(--sheet); border: 1px solid var(--line); border-radius: 14px; padding: 0 12px 12px; }
+  .lesson-head { order: 1; padding: 6px 4px 0; }
+  .stage-card { order: 2; }
+  .rail > .guide { order: 3; }
+  .timeline { order: 4; }
+  .rail > .panel { order: 5; }
+  .guide { min-height: 0; }
+  .guide__nav { margin-top: 14px; }
+  .keys-hint { display: none; }
+  .stage-tools { top: 8px; right: 8px; gap: 6px; }
+  .stage-tools .tool { height: 28px; padding: 0 9px; }
+  .stage { padding: 44px 6px 6px; }
+}
+@media (max-width: 520px) {
+  .nav__item .nav__label { display: none; }
+  .nav__item svg { display: block !important; width: 17px; height: 17px; }
+  .nav__item, .nav__item.is-active { padding: 0 9px; }
+  .stage-tools .tool { font-size: 0; gap: 0; padding: 0 8px; }
+  .stage-tools .tool svg { width: 15px; height: 15px; }
+  .stage-tools .tool span { font-size: 0; }
+}

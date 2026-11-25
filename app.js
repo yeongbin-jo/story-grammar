@@ -21,7 +21,8 @@
   Object.entries(TRACKS).forEach(([k, t]) => {
     const a = document.createElement("a");
     a.className = "nav__item"; a.href = "#" + k; a.dataset.track = k;
-    a.innerHTML = `<svg viewBox="0 0 24 24">${t.icon || '<rect x="4" y="5" width="16" height="14" rx="2"/>'}</svg>${t.short}`;
+    a.innerHTML = `<svg viewBox="0 0 24 24">${t.icon || '<rect x="4" y="5" width="16" height="14" rx="2"/>'}</svg><span class="nav__label">${t.short}</span>`;
+    a.title = t.name; a.setAttribute("aria-label", t.name);
     nav.insertBefore(a, glossLink);
   });
   const L = window.LESSONS;
@@ -291,6 +292,7 @@
     if (TRACKS[id]) {
       const last = store.get(P + "last-" + id, null);
       const t = L.find((l) => l.id === last && trackOf(l) === id) || L.find((l) => trackOf(l) === id);
+      if (!t) { history.replaceState(null, "", "#"); return route(); }
       history.replaceState(null, "", "#" + t.id);
       return route();
     }

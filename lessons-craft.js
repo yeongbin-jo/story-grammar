@@ -187,7 +187,7 @@
       api.controls.append(M.el("p", { class: "hint" }, "결과를 바꾸면 위쪽 결과 칸, 카드의 값 전환, 남는 질문이 함께 바뀝니다."));
       cv.addEventListener("pointerdown", (e) => {
         if (step !== 2) return;
-        const r = cv.getBoundingClientRect(), px = e.clientX - r.left, py = e.clientY - r.top;
+        const r = cv.getBoundingClientRect(), px = e.clientX - r.left - (cv._inset || 0), py = e.clientY - r.top - (cv._inset || 0);
         const hit = leafHits.find((b) => px >= b.x && px <= b.x + b.w && py >= b.y && py <= b.y + b.h);
         if (hit) { res = hit.i; chips.set(hit.i); since = 0; }
       });

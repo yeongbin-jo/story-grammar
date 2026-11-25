@@ -1108,7 +1108,7 @@
         visible().forEach((e) => { const d = Math.abs(geo.X(e.x) - mx); if (d < bd) { bd = d; best = ev.indexOf(e); } });
         return best;
       };
-      const local = (e) => { const r = cv.getBoundingClientRect(); return [e.clientX - r.left, e.clientY - r.top]; };
+      const local = (e) => { const r = cv.getBoundingClientRect(); return [e.clientX - r.left - (cv._inset || 0), e.clientY - r.top - (cv._inset || 0)]; };
       cv.addEventListener("pointerdown", (e) => { const [mx, my] = local(e); if (!geo || my < geo.G.y - 10 || my > geo.G.y + geo.G.h + 40) return; const i = pick(mx); if (i >= 0) { drag = i; cv.setPointerCapture(e.pointerId); cv.style.cursor = "grabbing"; } });
       cv.addEventListener("pointermove", (e) => {
         const [mx] = local(e);

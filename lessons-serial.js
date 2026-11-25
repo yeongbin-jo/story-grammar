@@ -571,7 +571,7 @@
       const openC = M.chips(api.controls, { title: "1화 첫 장면", items: ["사건으로 시작", "세계관 설명으로 시작"], value: 0, onPick: (i) => { open = i; force5 = true; prose(); } });
       hint(api, "4·5단계에서는 아래 회차 카드를 누를 때마다 그 화의 훅 종류가 바뀝니다.");
       S.cv.addEventListener("pointerdown", (e) => {
-        const r = S.cv.getBoundingClientRect(), px = e.clientX - r.left, py = e.clientY - r.top;
+        const r = S.cv.getBoundingClientRect(), px = e.clientX - r.left - (S.cv._inset || 0), py = e.clientY - r.top - (S.cv._inset || 0);
         const h = hits.find((q) => px >= q.x && px <= q.x + q.w && py >= q.y && py <= q.y + q.h);
         if (!h) return;
         arr[h.i] = (arr[h.i] + 1) % HN.length; arrC.set(-1);

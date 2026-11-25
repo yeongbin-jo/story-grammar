@@ -76,7 +76,8 @@ matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => (_co
 new MutationObserver(() => (_cols = null)).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
 
 M.alpha = (hex, a) => {
-  const h = hex.replace("#", "");
+  if (typeof hex !== "string" || !hex.trim().startsWith("#")) return hex ? `color-mix(in srgb, ${hex} ${Math.round(a * 100)}%, transparent)` : `rgba(128,128,128,${a})`;
+  const h = hex.trim().replace("#", "");
   const n = parseInt(h.length === 3 ? h.split("").map((c) => c + c).join("") : h, 16);
   return `rgba(${(n >> 16) & 255},${(n >> 8) & 255},${n & 255},${a})`;
 };
@@ -98,9 +99,11 @@ M.fit = (c) => {
   const W = Math.max(1, Math.round(r.width * d)), H = Math.max(1, Math.round(r.height * d));
   if (c.width !== W || c.height !== H) { c.width = W; c.height = H; }
   const x = c.getContext("2d");
-  x.setTransform(d, 0, 0, d, 0, 0);
-  x.clearRect(0, 0, r.width, r.height);
-  return { x, w: r.width, h: r.height };
+  /* 안쪽 여백: 가장자리에 붙여 그린 선·상자가 잘리지 않게. 포인터 좌표는 c._inset 만큼 빼서 쓴다 */
+  const m = r.width < 520 ? 4 : 8; c._inset = m;
+  x.setTransform(d, 0, 0, d, d * m, d * m);
+  x.clearRect(-m, -m, r.width, r.height);
+  return { x, w: r.width - 2 * m, h: r.height - 2 * m };
 };
 
 M.text = (x, s, px, py, o = {}) => {
